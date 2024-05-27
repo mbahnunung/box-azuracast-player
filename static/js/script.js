@@ -4,7 +4,7 @@
  */
 const musicData = [];
 // AzuraCast base
-const apiBase = "https://your-azuracast-server.com";
+const apiBase = "https://s1.cloudmu.id";
 
 /**
  * Process data
@@ -25,11 +25,7 @@ fetch(apiBase + "/api/nowplaying")
 				name: reslt.station.description,
 				artist: reslt.now_playing.song.artist,
 				streamUrl: reslt.station.listen_url,
-				api:
-					apiBase +
-					"/api/nowplaying_static/" +
-					reslt.station.shortcode +
-					".json",
+				api: apiBase + "/api/nowplaying_static/" + reslt.station.shortcode + ".json",
 				musicPath: reslt.station.listen_url,
 			};
 			musicData.push(apiData);
@@ -66,8 +62,7 @@ fetch(apiBase + "/api/nowplaying")
 				title: title = station.title,
 				album: album = station.album || "Unknown",
 				art: art = station.posterUrl,
-				stream: stream = "https://open.spotify.com/search/" +
-					encodeURIComponent(artist + " - " + title),
+				stream: stream = "https://open.spotify.com/search/" + encodeURIComponent(artist + " - " + title),
 				logo: logo = "./static/images/misc/spotify.png",
 				// year: year = "Unknown",
 			} = data;
