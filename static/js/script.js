@@ -4,7 +4,7 @@
  */
 const musicData = [];
 // AzuraCast base
-const apiBase = "https://s1.cloudmu.id";
+const apiBase = "https://asv.alhastream.com";
 
 /**
  * Process data
